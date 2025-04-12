@@ -1,0 +1,56 @@
+{
+  "name": "daily-report-converter",
+  "version": "1.0.0",
+  "description": "効率的な日報入力と月報生成を支援するCLIツール",
+  "main": "dist/index.js",
+  "bin": {
+    "daily-report": "./dist/cli.js"
+  },
+  "type": "module",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "ts-node --esm src/cli.ts",
+    "dev": "ts-node --esm src/cli.ts",
+    "build": "tsup src/cli.ts src/index.ts --format esm --dts --clean",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mag-rock/daily-report-converter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mag-rock/daily-report-converter/issues"
+  },
+  "homepage": "https://github.com/mag-rock/daily-report-converter#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "date-fns": "^4.1.0",
+    "inquirer": "^8.2.6",
+    "lowdb": "^3.0.0",
+    "openai": "^4.93.0"
+  }
+}
