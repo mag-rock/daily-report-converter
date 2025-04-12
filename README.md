@@ -19,6 +19,7 @@
 - [要件定義書](docs/requirements.md)
 - [実装計画書](docs/implementation_plan.md) 
 - [技術選定書](docs/tech_stack.md)
+- [アーキテクチャ設計書](docs/architecture.md)
 - [UX設計書](docs/ux_design.md)
 
 ## 開発状況
