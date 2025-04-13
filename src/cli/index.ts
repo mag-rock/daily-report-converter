@@ -3,7 +3,24 @@
  * コマンドラインインターフェイスの実装
  */
 
-// 実装予定のCLIコマンド
-// export * from './daily-report.js';
-// export * from './monthly-report.js';
-// export * from './settings.js';
+import { Command } from 'commander';
+import { createCommand } from './commands/create.js';
+import { listCommand } from './commands/list.js';
+import { editCommand } from './commands/edit.js';
+import { generateCommand } from './commands/generate.js';
+import { configCommand } from './commands/config.js';
+import { templateCommand } from './commands/template.js';
+
+/**
+ * CLIコマンドを登録する
+ * @param program Commander.jsのインスタンス
+ */
+export function registerCommands(program: Command): void {
+  // 各コマンドを登録
+  createCommand(program);
+  listCommand(program);
+  editCommand(program);
+  generateCommand(program);
+  configCommand(program);
+  templateCommand(program);
+}

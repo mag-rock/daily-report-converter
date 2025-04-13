@@ -4,6 +4,7 @@ import { Command } from 'commander';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { registerCommands } from './cli/index.js';
 
 // ESMでの__dirnameの代替手段
 const __filename = fileURLToPath(import.meta.url);
@@ -21,13 +22,8 @@ program
   .description('日報入力・月報生成支援ツール')
   .version(version);
 
-// コマンドのサブモジュールをここでインポートします（実装後）
-// import { registerDailyReportCommand } from './cli/daily-report.js';
-// import { registerMonthlyReportCommand } from './cli/monthly-report.js';
-
-// コマンド登録
-// registerDailyReportCommand(program);
-// registerMonthlyReportCommand(program);
+// コマンドを登録
+registerCommands(program);
 
 program.parse(process.argv);
 
