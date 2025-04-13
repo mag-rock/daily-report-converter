@@ -5,15 +5,15 @@
 ### フェーズ1: CLIインターフェース実装
 
 #### 1.1 プロジェクト初期設定（1週目）
-- プロジェクト構造の設定
-- 必要なライブラリのインストール（TypeScript, Commander.js, Inquirer.js, date-fns, lowdb）
-- 開発環境の設定（ESLint, Prettier, tsup）
-- Gitリポジトリの初期化
+- [x] プロジェクト構造の設定
+- [x] 必要なライブラリのインストール（TypeScript, Commander.js, Inquirer.js, date-fns, lowdb）
+- [x] 開発環境の設定（ESLint, Prettier, tsup）
+- [x] Gitリポジトリの初期化
 
 #### 1.2 コアモジュール実装（2-3週目）
-- データモデルの実装
-- データ保存機能の実装（lowdbを使用）
-- 日付・時間処理ユーティリティの実装
+- [x] データモデルの実装
+- [x] データ保存機能の実装（lowdbを使用）
+- [x] 日付・時間処理ユーティリティの実装
 
 #### 1.3 CLIインターフェース実装（4-5週目）
 - コマンド体系の実装（Commander.js）
