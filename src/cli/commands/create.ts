@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { format } from 'date-fns';
 import { DailyReportInput, DailyReport } from '../../models/daily-report.js';
 import { promptDailyReport } from '../prompts/daily-report-prompts.js';
-import { saveReport, calculateTotalHours } from '../../services/data-store.js';
+import { saveReport, calculateTotalHours, initializeDb } from '../../services/data-store.js';
 
 export function createCommand(program: Command): void {
   program
@@ -17,6 +17,9 @@ export function createCommand(program: Command): void {
     .action(async (options) => {
       try {
         console.log('📝 新しい日報を作成します');
+        
+        // データベースの初期化
+        await initializeDb();
         
         // デフォルト値の設定
         const defaultValues: Partial<DailyReport> = {};
